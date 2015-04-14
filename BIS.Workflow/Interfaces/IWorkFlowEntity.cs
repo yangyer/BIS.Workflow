@@ -10,7 +10,7 @@ namespace BIS.WorkFlow.Interfaces
     {
         IWorkFlowState CurrentState { get; set; }
 
-        IWorkFlowEntity MoveNext();
+        IWorkFlowEntity MoveNext(IWorkFlowState nextState);
 
         IWorkFlowEntity MovePrevious();
     }

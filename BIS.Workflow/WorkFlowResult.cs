@@ -49,7 +49,7 @@ namespace BIS.WorkFlow
 
         public static IWorkFlowResult<T> GetExceptionResult(Exception ex)
         {
-            return new WorkFlowResult<T>(WorkFlowResultTypes.Exception, default(T), friendlyMessage, "", ex);
+            return new WorkFlowResult<T>(WorkFlowResultTypes.Exception, default(T), ex.Message, "", ex);
         }
     }
 }
